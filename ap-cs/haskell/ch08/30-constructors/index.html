@@ -22,7 +22,7 @@
 	<meta itemprop="description" content="What is a value constructor? A type constructor?">
 	<meta itemprop="datePublished" content="2025-09-22T12:56:15-05:00">
 	<meta itemprop="dateModified" content="2025-09-25T18:30:18-05:00">
-	<meta itemprop="wordCount" content="381">
+	<meta itemprop="wordCount" content="408">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="8. Constructors">
 	<meta name="twitter:description" content="What is a value constructor? A type constructor?">
@@ -1587,9 +1587,15 @@ not use the pattern <code>(Game_Result x)</code>.</p>
 Write the signature and function.</p>
 </li>
 <li>
-<p>The <code>opponent_result</code> function takes in a <code>Game_Result</code> of a team
-and puts out the <code>Game_Result</code> of their opponent in the last match.
-Write the signature and function.</p>
+<p>The <code>opponent_result</code> function takes in a <code>Game_Result</code>
+and puts out the <code>Game_Result</code> of the opponent. For example, if
+team A plays team B, and team A&rsquo;s result was <code>Win</code>, then team B&rsquo;s
+result was <code>Lose</code>. In code:</p>
+<pre><code> r :: Game_Result
+ r = Win
+ ex7 = (opponent_result r == Lose)
+</code></pre>
+<p>Write the signature and function.</p>
 </li>
 <li>
 <p>What is wrong with this partial function? Find and fix at least two issues.</p>
