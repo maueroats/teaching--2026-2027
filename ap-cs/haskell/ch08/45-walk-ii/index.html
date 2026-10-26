@@ -22,7 +22,7 @@
 	<meta itemprop="description" content="Exercises introducing record syntax.">
 	<meta itemprop="datePublished" content="2025-09-24T13:38:20-05:00">
 	<meta itemprop="dateModified" content="2025-09-25T18:30:18-05:00">
-	<meta itemprop="wordCount" content="228">
+	<meta itemprop="wordCount" content="334">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="8. Walk II">
 	<meta name="twitter:description" content="Exercises introducing record syntax.">
@@ -1476,7 +1476,16 @@
 </div>
 
             <div class="td-toc" data-proofer-ignore>
-</div>
+<div class="td-toc-title">
+      <span class="td-toc-title__text">On this page</span>
+      <a class="td-toc-title__link" title="Top of page" href="#"></a>
+    </div>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#testing-code">Testing Code</a></li>
+  </ul>
+</nav>
+  </div>
 
             
 	
@@ -1621,7 +1630,29 @@ updateScore g pts = g{points = op + helper pts}
 updateScore g@(Game{points=op}) pts =
     g{points = op + pts}
 -->
-
+<h2 id="testing-code">Testing Code</h2>
+<pre tabindex="0"><code>ex1 :: Student
+ex1 = Student {age=16, name=&#34;Benny&#34;}
+ex2 = (Student {age=17, name=&#34;Benny&#34;} == older ex1)
+ex3 :: Game
+ex3 = Game{pos=(3,4), points=50}
+ex4a = move_right ex3
+ex4b = (ex4a == Game {pos=(4,4), points=50})
+ex5a = score_6 ex4a
+ex5b = (ex5a == Game {pos=(3,4), points=56})
+ex6a :: AttackType
+ex6a = Nothingg
+ex6b :: AttackType
+ex6b = Whack
+ex6c :: AttackType
+ex6c = Smash
+ex6d :: AttackType
+ex6d = Fire 15
+ex7a = updateScore ex4a ex6a == ex4a
+ex7b = updateScore ex4a ex6b == Game {pos=(3,4), points=52}
+ex7c = updateScore ex4a ex6c == Game {pos=(3,4), points=55}
+ex7d = updateScore ex4a ex6d == Game {pos=(3,4), points=65}
+</code></pre>
 	<div class="td-page-meta__lastmod">
   Last modified September 25, 2025: <a data-proofer-ignore href="https://github.com/maueroats/teaching--2026-2027/commit/54ffa6a4d755464a867bcd3c903e64d3593553bd">Daily exercises learning to make records. (54ffa6a)</a>
 </div>
