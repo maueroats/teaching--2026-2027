@@ -22,7 +22,7 @@
 	<meta itemprop="description" content="A sequence of short exercises to become familiar with the first half of constructors.">
 	<meta itemprop="datePublished" content="2025-09-22T14:49:26-05:00">
 	<meta itemprop="dateModified" content="2025-09-25T18:30:18-05:00">
-	<meta itemprop="wordCount" content="191">
+	<meta itemprop="wordCount" content="297">
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:title" content="8. Walk I">
 	<meta name="twitter:description" content="A sequence of short exercises to become familiar with the first half of constructors.">
@@ -1476,7 +1476,16 @@
 </div>
 
             <div class="td-toc" data-proofer-ignore>
-</div>
+<div class="td-toc-title">
+      <span class="td-toc-title__text">On this page</span>
+      <a class="td-toc-title__link" title="Top of page" href="#"></a>
+    </div>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#tester-code">Tester code</a></li>
+  </ul>
+</nav>
+  </div>
 
             
 	
@@ -1601,7 +1610,32 @@ calories :: Drink -> Int
 calories Water = 0
 calories Gatorade = 15
 -->
-
+<h2 id="tester-code">Tester code</h2>
+<pre tabindex="0"><code>p1 :: AList
+p1 = [10,20,30]
+p2 = (ao p1 == 40)
+p3 :: WP
+p3 = (&#34;Chicago&#34;,&#34;Illinois&#34;)
+p4 = (ce [(&#34;X&#34;,&#34;Y&#34;),(&#34;A&#34;,&#34;A&#34;),(&#34;B&#34;,&#34;B&#34;),(&#34;C&#34;,&#34;D&#34;)] == 2)
+p5 :: Celsius
+p5 = Celsius 37.0
+p6 :: Fahrenheit
+p6 = Fahrenheit 98.6
+p7 = (p6 == tempchange p5)
+p8a :: Surname
+p8a = Surname &#34;Mauer&#34;
+p8b = Surname &#34;Oats&#34;
+p8c :: GivenName
+p8c = GivenName &#34;Doc&#34;
+p9 = (marry p8a p8b) == Surname &#34;Mauer-Oats&#34;
+p10a = (distTo0 Origin = 0)
+p10b = (distTo0 (Point 3.0 4.0)) == 5.0
+p11a :: Drink
+p11a = Gatorade
+p11b :: Drink
+p11b = Water
+p12 = (calories Water, calories Gatorade) == (0,15)
+</code></pre>
 	<div class="td-page-meta__lastmod">
   Last modified September 25, 2025: <a data-proofer-ignore href="https://github.com/maueroats/teaching--2026-2027/commit/54ffa6a4d755464a867bcd3c903e64d3593553bd">Daily exercises learning to make records. (54ffa6a)</a>
 </div>
